@@ -1,0 +1,93 @@
+<html>
+<head>
+    <!--
+        将此内容保存为 html 文件，浏览器允许运行脚本进行测试。
+    -->
+
+    <script language="javascript">
+//        var a='<P><IMG src="1111.jpg">hahhah<IMG src="2222.jpg"></P>'
+//        var b=/<IMG src=\"([^\"]*?)\">/gi;
+//        alert(a);
+//        var s=a.match(b)
+//        for(var i= 0;i<s.length;i++)
+//        {
+//            alert(s[i]);
+//            alert(RegExp.$1)
+//        }
+
+        //var content='${item.content}';
+        //var content='hahha<img src="111.jpg"  title="微笑" />zheshigetupian<img src="222.jpg"  title="撇嘴" />';
+
+
+
+
+
+//        re = new RegExp("<(?!img|br|p|/p).*?>", "g"); // 创建正则表达式对象。
+//        r = content.match(re); // 在字符串 s 中查找匹配。
+//        console.log(content);
+//        var contentValue = content.replace(/<[^>]+>/g, ""); //去掉所有的html标记
+//        if(contentValue.length>80){
+//            contentValue=contentValue.substring(0,80)+"...";
+//        }
+
+       // console.log(contentValue);
+
+//var content=img title=":blush:" align="absmiddle" class="emoji" alt=":blush:" src="images/emoji/blush.png">123321;
+//content.replace(/<img([^>]+)blush\:([^>]+)>(\d+)/ig,"<img$1blush:$3$2>");
+//        console.log(content)
+
+//思路分两步：作者（yanue）.
+//1，匹配出图片img标签（即匹配出所有图片），过滤其他不需要的字符
+//2.从匹配出来的结果（img标签中）循环匹配出图片地址（即src属性）
+//var str = "this is test string <img src=\"http:yourweb.com/test.jpg\" width='50' > 123 and the end <img src=\"所有地址也能匹配.jpg\" /> 33! <img src=\"/uploads/attached/image/20120426/20120426225658_92565.png\" alt=\"\" />"
+////匹配图片（g表示匹配所有结果i表示区分大小写）
+//var imgReg = /<img.*?(?:>|\/>)/gi;
+////匹配src属性
+//var srcReg = /src=[\'\"]?([^\'\"]*)[\'\"]?/i;
+//var arr = str.match(imgReg);
+//alert(arr);
+//for (var i = 0; i < arr.length; i++) {
+//    var src = arr[i].match(srcReg);
+//    //获取图片地址
+//    if(src[1]){
+//        alert('addr'+(i+1)+'：'+src[1]);
+//    }
+//    //当然你也可以替换src属性
+//    if (src[0]) {
+//        var t = src[0].replace(/src/i, "href");
+//        //alert(t);
+//    }
+//}
+//
+//var str = '<div>\
+//    <img src="http://www.baidu.com/pic/a.jpg" alt="" />\
+//    <p>this is a pic</p>\
+//    <img src="http://www.baidu.com/pic/b.jpg" />\
+//    <p>this is pic b</p>\
+//</div>';
+//var patt = /<img[^>]+src=['"]([^'"]+)['"]+/g;
+//var result = [], temp;
+//
+//while( (temp= patt.exec(str)) != null ) {
+//    result.push(temp[1]);
+//}
+//
+//console.log(result);
+
+var REG = /<img src=['"].*?['"] alt=['"](.*?)['"](\s\/)?>/ig;
+var content="<img src='http://img3.imgtn.bdimg.com/it/u=2942275770,2134292425&fm=21&gp=0.jpg' alt='微笑' />";
+var temp=content.replace(REG,"[$1]");
+
+console.log(REG.test(content));
+alert(content);
+alert(temp);
+
+    </script>
+
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>

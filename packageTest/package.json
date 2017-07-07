@@ -1,0 +1,22 @@
+{
+  "name": "package1",
+  "version": "7.1.0",
+  "description": "package test ",
+  "main": "index.js",
+  "scripts": {
+    "test": "hahhah"
+  },
+  "repository": {
+    "type": "git",
+    "url": "hahahh"
+  },
+  "keywords": [
+    "hahhah"
+  ],
+  "author": "hahhha",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.15.3",
+    "utility": "^1.12.0"
+  }
+}

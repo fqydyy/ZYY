@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微信表情Demo</title>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react-dom.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/browser.min.js"></script>
+<style>
+    #container{
+        border:1px solid red;
+        width:500px;
+        height:200px;
+        position: relative;
+    }
+    .operation{
+        position: absolute;
+        bottom:10px;
+        border:1px solid black;
+        background-color: #FB5A4F;
+    }
+
+</style>
+</head>
+<body>
+<div id="container">
+    <div id="example"></div>
+    <div id="operation_area"></div>
+    <div id="facelist"></div>
+</div>
+
+<script type="text/babel" src="react-face.js">
+
+</script>
+
+</body>
+</html>

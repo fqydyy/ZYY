@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin:0 auto;padding:0 auto;}
+        #left {
+            background-color: green;
+            float: left;
+            width: 220px;
+            margin-right: -100%;
+            /*min-height: 300px;*/
+        }
+        #content {
+            float: left;
+            width: 100%;
+        }
+        #contentInner {
+            margin-left: 220px;/*==等于左边栏宽度值==*/
+            background-color: orange;
+            height: 400px;content高度不能自己变化，随着contentInner的高度变化而变化
+        }
+    </style>
+</head>
+<body>
+<div id="left">
+    Left Sidebar
+</div>
+<div id="content">
+    <div id="contentInner">
+        Main Content
+    </div>
+</div>
+</body>
+</html>

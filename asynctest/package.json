@@ -1,0 +1,21 @@
+{
+  "name": "asynctest",
+  "version": "1.0.0",
+  "description": "实现async模块控制异步并发数量",
+  "main": "app.js",
+  "scripts": {
+    "test": "hahha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "hahha"
+  },
+  "keywords": [
+    "async"
+  ],
+  "author": "zyy",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.4.1"
+  }
+}

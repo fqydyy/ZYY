@@ -1,0 +1,23 @@
+{
+  "name": "mochatest",
+  "version": "1.0.0",
+  "description": "mocha测试用例 学习使用mocha测试框架 使用should断言库 使用测试率覆盖工具istanbul",
+  "main": "main.js",
+  "scripts": {
+    "test": "hahha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "hahha"
+  },
+  "keywords": [
+    "mocha",
+    "should",
+    "istanbul"
+  ],
+  "author": "zyy",
+  "license": "ISC",
+  "dependencies": {
+    "should": "^11.2.1"
+  }
+}

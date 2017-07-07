@@ -1,0 +1,36 @@
+<html>
+<head>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react-dom.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/browser.min.js"></script>
+</head>
+
+<body>
+<div id="example"></div>
+<script type="text/babel">
+
+    var MyComponent = React.createClass({
+        handleClick: function() {
+            this.refs.myTextInput.focus();
+        },
+        render: function() {
+            return (
+                <div>
+                    <input type="text" ref="myTextInput" />
+                    <input type="button" value="Focus the text input" onClick={this.handleClick} />
+                </div>
+            );
+        }
+    });
+
+    ReactDOM.render(
+        <MyComponent />,
+        document.getElementById('example')
+    );
+
+
+
+
+</script>
+</body>
+</html>

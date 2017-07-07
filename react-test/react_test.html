@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微信表情Demo</title>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react-dom.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/browser.min.js"></script>
+<style>
+    #container{
+        border:1px solid red;
+        width:500px;
+        height:200px;
+        position: relative;
+    }
+    .operation{
+        position: absolute;
+        bottom:10px;
+        border:1px solid black;
+        background-color: #FB5A4F;
+    }
+    .face{
+        width:100px;
+        height:50px;
+        border:1px solid orange;
+    }
+</style>
+</head>
+<body>
+<div id="container">
+    <div id="example"></div>
+    <div id="operation_area"></div>
+    <div id="facelist"></div>
+</div>
+
+<script type="text/babel">
+var FaceItem=React.createClass({
+    render:function(){
+
+        return <img src={this.props.url} />
+    }
+});
+
+
+
+var ShowFace=React.createClass({
+
+    getInitialState:function(){
+        return ({
+            url:["Face/1.gif","Face/2.gif"]
+        });
+    },
+
+    handleClick:function(){
+        console.log(this.state.url);
+        ReactDOM.render(
+                <FaceItem  />,
+        document.getElementById("example")
+    );
+},
+    render:function(){
+        console.log(this.state.url[0]);
+        return (
+            <div className="face">
+                url.map((item)=>
+                    <img src={item} onClick={this.handleClick.bind(this)} />
+                )
+                /*<img src={this.state.url[0]} alt="微笑" onClick={this.handleClick.bind(this)} />
+                <img src="Face/2.gif" alt="尴尬" />*/
+            </div>
+        )
+
+    }
+});
+
+var Operation=React.createClass({
+
+
+
+handleClick:function(){
+    ReactDOM.render(
+        <ShowFace  />,
+        document.getElementById("facelist")
+    );
+},
+
+render:function(){
+return (
+<div>
+    <p className="operation">
+        <a className="emoticonlist" onClick={this.handleClick}>表情</a>
+        <button>提交</button>
+    </p>
+
+</div>
+)
+}
+});
+
+
+
+ReactDOM.render(
+<Operation />,
+document.getElementById("operation_area")
+)
+</script>
+</body>
+</html>

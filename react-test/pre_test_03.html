@@ -1,0 +1,34 @@
+<html>
+<head>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/react-0.14.7/build/react-dom.min.js"></script>
+    <script src="http://static.runoob.com/assets/react/browser.min.js"></script>
+</head>
+
+<body>
+<div id="example"></div>
+<script>
+    const faceparameter = {
+        "微笑": {
+            url: "http://img.lanrentuku.com/img/allimg/1208/46-120Q0112017.gif",
+            title: "微笑",
+            code: "/::)"
+        },
+        "撇嘴": {
+            url: "http://img.lanrentuku.com/img/allimg/1208/46-120Q0112017-51.gif",
+            title: "撇嘴",
+            code: "/::～"
+        }
+    };
+
+    var str = "hahhah[微笑]hasan[撇嘴]hsansn";
+    var temp = str.replace(/(\[(.*?)\])/ig, function (a, b, c) {
+        return '<img src="' + faceparameter[c].url + '" alt="' + faceparameter[c].title + '" />'
+    });
+    console.log(str);
+    console.log(temp);
+
+
+</script>
+</body>
+</html>
